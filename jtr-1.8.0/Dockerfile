@@ -25,6 +25,8 @@ RUN ls -ail /opt/jtr/dic
 
 RUN cd /opt/jtr/dic && tar xzf dic.tar.gz && rm dic.tar.gz
 
+RUN chmod 777 /opt/jtr/run
+
 WORKDIR /etc/jtr/
 
 ENTRYPOINT ["/opt/jtr/run/john"]
